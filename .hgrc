@@ -1,0 +1,6 @@
+[ui]
+username = Barbu Paul - Gheorghe <barbu.paul.gheorghe@gmail.com>
+[extensions]
+hgext.mq =
+[alias]
+qstatus = status --rev -2:.

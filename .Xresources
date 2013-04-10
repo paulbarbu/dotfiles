@@ -1,0 +1,36 @@
+! scrollback buffer lines - 65535 is max (64 is default)
+URxvt*saveLines:12000
+
+! font color (default is black)
+URxvt*foreground:White
+
+! background color (prior to tinting) (default is white)
+URxvt*background:Gray40
+!URxvt*background:Saddlebrown
+
+! xft fonts - anti-aliased xft font setup is nice, but can be choppy
+URxvt*font: xft:dejavu sans mono:pixelsize=13
+
+! Replace blue folder colors with a lighter shade for clarity. To
+! set colored folders and files within urxvt, xterm, and aterm, add
+! the following line to your ~/.bashrc ($HOME/.bashrc) file under
+! the heading "# User specific aliases and functions":
+!   alias ls="ls -h --color=auto"
+URxvt*color4:YellowGreen
+URxvt*color12:YellowGreen
+
+! scrollbar position - left=false (default) or right=true
+URxvt*scrollBar_right:false
+
+!irssi
+URxvt*urgentOnBell:  true
+
+!URLs
+URxvt.perl-ext-common:  default,matcher
+URxvt.url-launcher:      /usr/bin/chromium
+URxvt.matcher.button:   1
+
+! URLs
+urxvt*.colorUL:    #00FFFF
+
+urxvt*meta8:False

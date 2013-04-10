@@ -1,0 +1,38 @@
+[giggle]
+    main-window-maximized = true
+    main-window-geometry = 0x0+0+0
+    main-window-view = FileView
+    history-view-vpane-position = 74
+    file-view-vpane-position = 556
+[color]
+    diff = auto
+    log = auto
+    ui = true
+[merge]
+    tool = vimdiff
+[alias]
+    wdiff = diff --color-words
+    last = log -1 -p HEAD
+    st = status
+    co = checkout
+    ci = commit
+    br = branch
+    sm = submodule
+    str = status
+    lol = log --oneline --graph --decorate
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[core]
+    autocrlf = input
+[format]
+    signature = Barbu Paul - Gheorghe\nCommon sense is not so common - Voltaire\nVisit My GitHub profile to see my open-source projects - https://github.com/paullik
+[sendemail]
+    chainreplyto = false
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+[imap]
+    folder = "[Gmail]/Drafts"
+    host = imaps://imap.gmail.com
+    port = 993
+[include]
+    path = .gitconfig.private

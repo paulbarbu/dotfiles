@@ -1,0 +1,13 @@
+xset b off
+mpd
+tmux new -d -n weechat -s irc weechat-curses
+
+urxvtd -q -f -o
+
+#setxkbmap ro cedilla &
+setxkbmap ro &
+
+xset +fp /usr/share/fonts/local &
+xset fp rehash &
+
+anyremote -s bluetooth:19 -log -a -name paullik -f /usr/share/anyremote/cfg-data/Server-mode/all-in-one.cfg &
