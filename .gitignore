@@ -103,3 +103,5 @@ Documents/
 .gitconfig.private
 .vim/
 !.vim/ycm_extra_conf.py
+*.private
+.gphoto/

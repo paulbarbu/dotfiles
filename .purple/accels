@@ -48,6 +48,7 @@
 ; (gtk_accel_path "<PurpleMain>/Tools/Plugins" "<Primary>u")
 ; (gtk_accel_path "<PurpleMain>/Buddies/Show/Buddy Details" "")
 ; (gtk_accel_path "<main>/Conversation/Remove..." "")
+; (gtk_accel_path "<main>/Conversation/More/Presence Settings/Presence Settings/Appear Online" "")
 ; (gtk_accel_path "<PurpleMain>/Accounts/paullik (Yahoo)/Disable" "")
 ; (gtk_accel_path "<PurpleMain>/Help/sep2" "")
 ; (gtk_accel_path "<PurpleMain>/Buddies/sep1" "")

@@ -21,7 +21,7 @@ fi
 kalu &
 dropboxd &
 xfce4-notes &
-chromium &
+firefox &
 blueman-applet &
 #${HOME}/.screenlayout/dual-monitor-samsung.sh
 ${HOME}/.screenlayout/single-monitor.sh
