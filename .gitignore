@@ -105,3 +105,9 @@ Documents/
 !.vim/ycm_extra_conf.py
 *.private
 .gphoto/
+.ghc/
+.zcompdump
+.zsh-update
+.zsh_history
+.oh-my-zsh/
+!.oh-my-zsh/custom/config.zsh
