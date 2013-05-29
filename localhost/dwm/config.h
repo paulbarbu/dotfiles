@@ -25,9 +25,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Chromium",       NULL,       NULL,       1,            False,       -1 },
-	{ "Firefox",       NULL,       NULL,       1,            False,       -1 },
+	{ "Firefox",        NULL,       NULL,       1,            False,       -1 },
 	{ "Pidgin",         NULL,       NULL,       1<<2,         False,       -1 },
+	{ "Polly",          NULL,       NULL,       1<<2,            False,       -1 },
 	{ "Xfce4-notes",    NULL,       NULL,       1<<5,         False,       -1 },
+	{ "Transmission-gtk",    NULL,       NULL,       1<<5,         False,       -1 },
 	{ "Thunderbird",    NULL,       NULL,       1<<3,         False,       -1 },
 	{ "Vlc",            NULL,       NULL,       1<<4,         False,       -1 },
 };
