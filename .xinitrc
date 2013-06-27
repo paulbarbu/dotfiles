@@ -28,12 +28,12 @@ ${HOME}/.screenlayout/single-monitor.sh
 
 #conky | while read -r; do xsetroot -name "$REPLY"; done &
 
-${HOME}/localhost/dwmstatus/dwmstatus &
+${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
 
 feh --bg-scale /home/paullik/Documents/backgrounds/toronto.png &
 
 unclutter -jitter 5 -idle 2 &
 
-workrave &
+#workrave &
 
 exec ${HOME}/localhost/dwm/dwm

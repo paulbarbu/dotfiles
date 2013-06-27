@@ -111,3 +111,9 @@ Documents/
 .zsh_history
 .oh-my-zsh/
 !.oh-my-zsh/custom/config.zsh
+.cabal/
+.designer/
+.dwmstatus.log
+.tor-browser-en/
+.zshrc.orig
+.zshrc.pre-oh-my-zsh
