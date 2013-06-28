@@ -45,4 +45,4 @@ plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/paullik/Documents:/home/paullik/.gem/ruby/1.9.1/bin:/home/paullik/QtSDK/QtCreator/bin
+export PATH=$PATH:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/paullik/localhost/bin:/home/paullik/.gem/ruby/1.9.1/bin:/home/paullik/QtSDK/QtCreator/bin

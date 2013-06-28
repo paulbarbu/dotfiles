@@ -78,6 +78,7 @@ fi
 
 alias lhost='cd /media/paullik/localhost'
 alias aurget='aurget --noedit --deps'
+alias i3lock='${HOME}/localhost/bin/i3lock-wrapper'
 
 alias tmux='tmux -2'
 #Colored output

@@ -117,3 +117,5 @@ Documents/
 .tor-browser-en/
 .zshrc.orig
 .zshrc.pre-oh-my-zsh
+.i3/i3log
+*.tmp
