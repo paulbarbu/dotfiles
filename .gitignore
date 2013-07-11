@@ -9,6 +9,8 @@
 !.purple/accels
 localhost/
 !localhost/dwm/
+!localhost/dwmstatus/
+!localhost/mpdcontrol/
 .ICEauthority
 .VirtualBox/
 .Xauthority
