@@ -23,13 +23,13 @@ dropboxd &
 xfce4-notes &
 firefox &
 blueman-applet &
-clipit &
+#clipit &
 #${HOME}/.screenlayout/dual-monitor-samsung.sh
 ${HOME}/.screenlayout/single-monitor.sh
 
 #conky | while read -r; do xsetroot -name "$REPLY"; done &
 
-#${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
+${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
 
 feh --bg-scale /home/paullik/Documents/backgrounds/toronto.png &
 
@@ -37,6 +37,7 @@ unclutter -jitter 5 -idle 2 &
 
 #workrave &
 
-#exec ${HOME}/localhost/dwm/dwm
+exec ${HOME}/localhost/dwm/dwm
+#exec startlxde
 #exec i3
-exec i3 -V >> ~/.i3/i3log 2>&1
+#exec i3 -V >> ~/.i3/i3log 2>&1

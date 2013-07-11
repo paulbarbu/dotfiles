@@ -110,21 +110,24 @@ shiftview(const Arg *arg) {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
-static const char *printcmd[]  = { "scrot", NULL };
+static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
+static const char *printcmd[]  = { "shutter", NULL };
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *rebootcmd[]  = { "systemctl", "reboot", NULL };
 static const char *poweroffcmd[]  = { "systemctl", "poweroff", NULL };
 static const char *volupcmd[]  = { "amixer", "sset", "PCM", "10+", NULL };
 static const char *voldncmd[]  = { "amixer", "sset", "PCM", "10-", NULL };
 static const char *voltogglecmd[]  = { "amixer", "sset", "Master", "toggle", NULL };
+static const char *mpcprev[]  = { "mpc", "prev", NULL };
+static const char *mpcnext[]  = { "mpc", "next", NULL };
+static const char *mpdcontrol[]  = { "/home/paullik/localhost/mpdcontrol/mpdcontrol", NULL };
 
 #include "selfrestart.c"
-
-#include "mpdcontrol.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
     { 0,                            XK_Print,  spawn,          {.v = printcmd } },
+    { MODKEY,                       XK_Print,  spawn,          {.v = simpleprintcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = filemancmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
@@ -167,12 +170,12 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask|ControlMask, XK_F10,    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ShiftMask|ControlMask, XK_F11,    spawn,          {.v = rebootcmd } },
     { MODKEY|ShiftMask|ControlMask, XK_F12,    spawn,          {.v = poweroffcmd } },
-    { MODKEY,                       XK_F1,     mpdchange,      {.i = -1} },
-    { MODKEY,                       XK_F2,     mpdchange,      {.i = +1} },
-    { MODKEY,                       XK_Escape, mpdcontrol,     {0} },
+    { MODKEY,                       XK_F1,     spawn,          {.v = mpcprev} },
+    { MODKEY,                       XK_F2,     spawn,          {.v = mpcnext} },
+    { MODKEY,                       XK_Escape, spawn,          {.v = mpdcontrol} },
     { MODKEY,                       XK_KP_Enter, spawn,        {.v = voltogglecmd} },
     { MODKEY,                       XK_KP_Add,   spawn,        {.v = volupcmd} },
-    { MODKEY,                       XK_KP_Subtract, spawn,        {.v = voldncmd} },
+    { MODKEY,                       XK_KP_Subtract, spawn,     {.v = voldncmd} },
 };
 
 /* button definitions */
