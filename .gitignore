@@ -121,3 +121,13 @@ Documents/
 .zshrc.pre-oh-my-zsh
 .i3/i3log
 *.tmp
+.composer/
+.msmtprc
+.mysql_history
+.netbeans/
+.netbeans_metadata/
+.opera/
+.scrsetup.log
+.wireshark/
+.xbmc/
+calc/

@@ -1,3 +1,4 @@
+!Xft.dpi: 105.0
 ! scrollback buffer lines - 65535 is max (64 is default)
 URxvt*saveLines:12000
 

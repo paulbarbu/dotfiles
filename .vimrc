@@ -102,6 +102,14 @@ if has('cmdline_info')
     set showcmd "show partial commands in status line and
 endif
 
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Dejavu\ Sans\ Mono\ Book\ 11
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
 if has('statusline')
     set laststatus=2
     "Broken down into easily includeable segments

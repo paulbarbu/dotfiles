@@ -27,10 +27,14 @@ static const Rule rules[] = {
 	{ "Chromium",       NULL,       NULL,       1,            False,       -1 },
 	{ "Firefox",        NULL,       NULL,       1,            False,       -1 },
 	{ "Qt Creator",     NULL,       NULL,       1<<1,         False,       -1 },
+	{ "NetBeans IDE 7.3.1",     NULL,       NULL,       1<<1,         False,       -1 },
 	{ "Pidgin",         NULL,       NULL,       1<<2,         False,       -1 },
 	{ "Polly",          NULL,       NULL,       1<<2,            False,       -1 },
+	{ "Skype",          NULL,       NULL,       1<<2,            False,       -1 },
 	{ "Xfce4-notes",    NULL,       NULL,       1<<5,         False,       -1 },
 	{ "Transmission-gtk",    NULL,       NULL,       1<<5,         False,       -1 },
+	{ "Transmission-qt",    NULL,       NULL,       1<<5,         False,       -1 },
+	{ "Hamster",    NULL,       NULL,       1<<5,         False,       -1 },
 	{ "Thunderbird",    NULL,       NULL,       1<<3,         False,       -1 },
 	{ "Vlc",            NULL,       NULL,       1<<4,         False,       -1 },
 };
@@ -108,7 +112,8 @@ shiftview(const Arg *arg) {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvtc", NULL };
+static const char *termcmd[]  = { "xfce4-terminal", NULL };
+//static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
 static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
 static const char *printcmd[]  = { "shutter", NULL };

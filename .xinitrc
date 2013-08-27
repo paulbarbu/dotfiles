@@ -23,19 +23,22 @@ dropboxd &
 xfce4-notes &
 firefox &
 blueman-applet &
-#clipit &
-#${HOME}/.screenlayout/dual-monitor-samsung.sh
-${HOME}/.screenlayout/single-monitor.sh
+hamster &
+clipit &
+#${HOME}/.screenlayout/single-monitor.sh &>> ~/.scrsetup.log
+#${HOME}/.screenlayout/dual-monitor.sh &>> ~/.scrsetup.log
+${HOME}/.screenlayout/watson.sh &>> ~/.scrsetup.log
 
 #conky | while read -r; do xsetroot -name "$REPLY"; done &
 
 ${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
 
-feh --bg-scale /home/paullik/Documents/backgrounds/toronto.png &
+#feh --bg-scale /home/paullik/Documents/backgrounds/toronto.png &
 
 unclutter -jitter 5 -idle 2 &
 
 #workrave &
+wmname LG3D &
 
 exec ${HOME}/localhost/dwm/dwm
 #exec startlxde

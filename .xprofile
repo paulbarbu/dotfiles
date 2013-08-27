@@ -11,4 +11,4 @@ setxkbmap ro &
 xset +fp /usr/share/fonts/local &
 xset fp rehash &
 
-anyremote -s bluetooth:19 -log -a -name paullik -f /usr/share/anyremote/cfg-data/Server-mode/all-in-one.cfg &
+#anyremote -s bluetooth:19 -log -a -name paullik -f /usr/share/anyremote/cfg-data/Server-mode/all-in-one.cfg &
