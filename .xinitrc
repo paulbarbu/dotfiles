@@ -25,9 +25,9 @@ firefox &
 blueman-applet &
 hamster &
 clipit &
-#${HOME}/.screenlayout/single-monitor.sh &>> ~/.scrsetup.log
+${HOME}/.screenlayout/single-monitor.sh &>> ~/.scrsetup.log
 #${HOME}/.screenlayout/dual-monitor.sh &>> ~/.scrsetup.log
-${HOME}/.screenlayout/watson.sh &>> ~/.scrsetup.log
+#${HOME}/.screenlayout/watson.sh &>> ~/.scrsetup.log
 
 #conky | while read -r; do xsetroot -name "$REPLY"; done &
 
