@@ -19,8 +19,8 @@ fi
 #xfce4-power-manager &
 
 kalu &
-dropboxd &
-xfce4-notes &
+#dropboxd &
+#xfce4-notes &
 firefox &
 blueman-applet &
 hamster &
