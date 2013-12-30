@@ -135,4 +135,5 @@ calc/
 .zshrc_old
 Facultate/
 Pictures/
-
+.pylint.d/
+.scspell/

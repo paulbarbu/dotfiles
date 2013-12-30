@@ -45,7 +45,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/paullik/localhost/bin:/home/paullik/.gem/ruby/1.9.1/bin:/home/paullik/QtSDK/QtCreator/bin
+export PATH=$PATH:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/localhost/bin:$HOME/.gem/ruby/1.9.1/bin:$HOME/QtSDK/QtCreator/bin:$HOME/.cabal/bin
 # Add yourself some shortcuts to projects you often work on
 # Example:
 #
