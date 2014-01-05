@@ -137,3 +137,6 @@ Facultate/
 Pictures/
 .pylint.d/
 .scspell/
+net/
+.android/
+.Genymobile/

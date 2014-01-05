@@ -206,6 +206,7 @@ vnoremap > >gv
 
 ":nohlsearch on space
 noremap <silent> <Space> :silent noh<CR>
+noremap <silent> <Leader>s :setlocal spell!<CR>
 
 "for when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
