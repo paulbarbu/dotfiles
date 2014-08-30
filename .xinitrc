@@ -23,8 +23,9 @@ kalu &
 #xfce4-notes &
 firefox &
 blueman-applet &
-hamster &
+#hamster &
 clipit &
+workrave &
 ${HOME}/.screenlayout/single-monitor.sh &>> ~/.scrsetup.log
 #${HOME}/.screenlayout/dual-monitor.sh &>> ~/.scrsetup.log
 #${HOME}/.screenlayout/watson.sh &>> ~/.scrsetup.log

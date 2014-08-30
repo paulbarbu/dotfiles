@@ -112,20 +112,23 @@ shiftview(const Arg *arg) {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "xfce4-terminal", NULL };
+//static const char *termcmd[]  = { "terminology", NULL };
 //static const char *termcmd[]  = { "urxvtc", NULL };
+static const char *termcmd[]  = { "lxterminal", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
 static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
 static const char *printcmd[]  = { "shutter", NULL };
 static const char *suspendcmd[]  = { "systemctl", "suspend", NULL };
 static const char *rebootcmd[]  = { "systemctl", "reboot", NULL };
 static const char *poweroffcmd[]  = { "systemctl", "poweroff", NULL };
+static const char *lockcmd[]  = { "i3lock", NULL };
 static const char *volupcmd[]  = { "amixer", "sset", "PCM", "10+", NULL };
 static const char *voldncmd[]  = { "amixer", "sset", "PCM", "10-", NULL };
 static const char *voltogglecmd[]  = { "amixer", "sset", "Master", "toggle", NULL };
 static const char *mpcprev[]  = { "mpc", "prev", NULL };
 static const char *mpcnext[]  = { "mpc", "next", NULL };
 static const char *mpdcontrol[]  = { "/home/paullik/localhost/mpdcontrol/mpdcontrol", NULL };
+static const char *screenswitch[]  = { "/home/paullik/.screenlayout/switch.sh", NULL };
 
 #include "selfrestart.c"
 
@@ -149,6 +152,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_equal,  setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY,                       XK_Left,   prevlayout,     {0} },
 	{ MODKEY,                       XK_Right,  nextlayout,     {0} },
@@ -172,6 +176,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
     { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    { MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockcmd} },
 	{ MODKEY|ShiftMask|ControlMask, XK_F10,    spawn,          {.v = suspendcmd } },
 	{ MODKEY|ShiftMask|ControlMask, XK_F11,    spawn,          {.v = rebootcmd } },
     { MODKEY|ShiftMask|ControlMask, XK_F12,    spawn,          {.v = poweroffcmd } },
@@ -181,6 +186,7 @@ static Key keys[] = {
     { MODKEY,                       XK_KP_Enter, spawn,        {.v = voltogglecmd} },
     { MODKEY,                       XK_KP_Add,   spawn,        {.v = volupcmd} },
     { MODKEY,                       XK_KP_Subtract, spawn,     {.v = voldncmd} },
+    { MODKEY|ShiftMask|ControlMask, XK_grave, spawn,           {.v = screenswitch} },
 };
 
 /* button definitions */

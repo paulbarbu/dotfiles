@@ -45,7 +45,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/localhost/bin:$HOME/.gem/ruby/1.9.1/bin:$HOME/QtSDK/QtCreator/bin:$HOME/.cabal/bin
+export PATH=$PATH:/opt/kde/bin/:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/localhost/bin:$HOME/.gem/ruby/1.9.1/bin:$HOME/QtSDK/QtCreator/bin:$HOME/.cabal/bin:/usr/class/cs143/cool/bin
 # Add yourself some shortcuts to projects you often work on
 # Example:
 #
@@ -159,5 +159,19 @@ man() {
 		LESS_TERMCAP_us=$(printf "\e[1;32m") \
 			man "$@"
 }
+
+
+function cabal_sandbox_info() {
+    cabal_files=(*.cabal(N))
+    if [ $#cabal_files -gt 0 ]; then
+        if [ -f cabal.sandbox.config ]; then
+            echo "%{$fg[green]%}sandboxed%{$reset_color%}"
+        else
+            echo "%{$fg[red]%}not sandboxed%{$reset_color%}"
+        fi
+    fi
+}
+
+RPROMPT="\$(cabal_sandbox_info) $RPROMPT"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

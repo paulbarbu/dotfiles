@@ -12,5 +12,5 @@ export PATH
 
 export EDITOR="/usr/bin/vim"
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx &> ~/.xlog
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx > ~/.xlog
 
