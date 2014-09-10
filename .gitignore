@@ -165,4 +165,5 @@ net/
 Desktop/
 grub
 octave-workspace
-
+.password-store/
+.tmux/

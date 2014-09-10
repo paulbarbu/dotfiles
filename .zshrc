@@ -55,7 +55,7 @@ export PATH=$PATH:/opt/kde/bin/:/usr/lib/colorgcc/bin:/usr/local/bin:/usr/bin:/b
 HISTFILE=~/.histfile
 HISTSIZE=3000
 SAVEHIST=3000
-setopt appendhistory autocd extendedglob nomatch
+setopt appendhistory autocd extendedglob nomatch interactivecomments
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
