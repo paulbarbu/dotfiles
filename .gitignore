@@ -167,3 +167,4 @@ grub
 octave-workspace
 .password-store/
 .tmux/
+.gmvault/
