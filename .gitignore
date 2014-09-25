@@ -168,3 +168,4 @@ octave-workspace
 .password-store/
 .tmux/
 .gmvault/
+!.config/fish/functions/

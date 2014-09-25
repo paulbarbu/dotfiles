@@ -3,6 +3,7 @@ PS1='\[\e[1;97m\][\u@\h \W]\$\[\e[0m\] '
 
 alias lhost='cd /media/paullik/localhost'
 alias aurget='aurget --noedit --deps'
+alias cal='cal -m'
 
 alias tmux='tmux -2'
 #Colored output

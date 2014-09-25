@@ -114,7 +114,7 @@ shiftview(const Arg *arg) {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 //static const char *termcmd[]  = { "terminology", NULL };
 //static const char *termcmd[]  = { "urxvtc", NULL };
-static const char *termcmd[]  = { "lxterminal", NULL };
+static const char *termcmd[]  = { "lxterminal", "-e", "fish", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
 static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
 static const char *printcmd[]  = { "shutter", NULL };
