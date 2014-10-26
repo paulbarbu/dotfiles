@@ -1,0 +1,11 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 3
+total_run_times 0
+use_spacer none
+format_human_readable yes
+short_units yes
+
+TEXT
+$mpd_smart • r $memperc% s $swapperc% • c ${cpu cpu0}% • d ${downspeed eth0} u ${upspeed eth0} • ${time %d-%m-%Y %H:%M}

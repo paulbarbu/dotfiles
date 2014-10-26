@@ -31,8 +31,8 @@ ${HOME}/.screenlayout/single-monitor.sh &>> ~/.scrsetup.log
 #${HOME}/.screenlayout/watson.sh &>> ~/.scrsetup.log
 
 #conky | while read -r; do xsetroot -name "$REPLY"; done &
-
-${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
+(conky | while read LINE; do xsetroot -name "$LINE"; done) &
+#${HOME}/localhost/dwmstatus/dwmstatus &>> ~/.dwmstatus.log &
 
 #feh --bg-scale /home/paullik/Documents/backgrounds/toronto.png &
 

@@ -1,5 +1,4 @@
 xset b off
-mpd
 # tmux new -d -n weechat -s irc weechat-curses
 
 # urxvtd -q -f -o

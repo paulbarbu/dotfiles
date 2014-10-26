@@ -1,3 +1,3 @@
 function aurget
-	aurget --noedit --deps
+	/usr/bin/aurget --noedit --deps $argv
 end
