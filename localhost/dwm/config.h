@@ -16,7 +16,7 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "www", "dev", "chat", "office", "media", "misc", };
+static const char *tags[] = { "www", "dev", "ops", "office", "media", "misc", };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -28,9 +28,7 @@ static const Rule rules[] = {
 	{ "Firefox",        NULL,       NULL,       1,            False,       -1 },
 	{ "Qt Creator",     NULL,       NULL,       1<<1,         False,       -1 },
 	{ "NetBeans IDE 7.3.1",     NULL,       NULL,       1<<1,         False,       -1 },
-	{ "Pidgin",         NULL,       NULL,       1<<2,         False,       -1 },
-	{ "Polly",          NULL,       NULL,       1<<2,            False,       -1 },
-	{ "Skype",          NULL,       NULL,       1<<2,            False,       -1 },
+	{ "Skype",          NULL,       NULL,       1<<5,            False,       -1 },
 	{ "Xfce4-notes",    NULL,       NULL,       1<<5,         False,       -1 },
 	{ "Transmission-gtk",    NULL,       NULL,       1<<5,         False,       -1 },
 	{ "Transmission-qt",    NULL,       NULL,       1<<5,         False,       -1 },
