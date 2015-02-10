@@ -110,8 +110,6 @@ shiftview(const Arg *arg) {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-//static const char *termcmd[]  = { "terminology", NULL };
-//static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *termcmd[]  = { "lxterminal", "-e", "fish", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
 static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
@@ -125,7 +123,8 @@ static const char *voldncmd[]  = { "amixer", "sset", "PCM", "10-", NULL };
 static const char *voltogglecmd[]  = { "amixer", "sset", "Master", "toggle", NULL };
 static const char *mpcprev[]  = { "mpc", "prev", NULL };
 static const char *mpcnext[]  = { "mpc", "next", NULL };
-static const char *mpdcontrol[]  = { "/home/paullik/localhost/mpdcontrol/mpdcontrol", NULL };
+static const char *musiccontrol[]  = { "/home/paullik/localhost/ppyt/ppyt.sh", NULL };
+// static const char *mpdcontrol[]  = { "/home/paullik/localhost/mpdcontrol/mpdcontrol", NULL };
 static const char *screenswitch[]  = { "/home/paullik/.screenlayout/switch.sh", NULL };
 
 #include "selfrestart.c"
@@ -180,7 +179,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask|ControlMask, XK_F12,    spawn,          {.v = poweroffcmd } },
     { MODKEY,                       XK_F1,     spawn,          {.v = mpcprev} },
     { MODKEY,                       XK_F2,     spawn,          {.v = mpcnext} },
-    { MODKEY,                       XK_Escape, spawn,          {.v = mpdcontrol} },
+    { MODKEY,                       XK_Escape, spawn,          {.v = musiccontrol} },
     { MODKEY,                       XK_KP_Enter, spawn,        {.v = voltogglecmd} },
     { MODKEY,                       XK_KP_Add,   spawn,        {.v = volupcmd} },
     { MODKEY,                       XK_KP_Subtract, spawn,     {.v = voldncmd} },
