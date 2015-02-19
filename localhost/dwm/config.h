@@ -109,7 +109,8 @@ shiftview(const Arg *arg) {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+// static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "rofi", "-show", "run", "-lines", "5", "-padding", "0", "-hmode", "-width", "100", "-location", "1", "-bw", "0", "-font", "mono 8", "-bg", normbgcolor, "-fg", normfgcolor, "-hlbg", selbgcolor, "-hlfg", selfgcolor, "-bc", normbordercolor, NULL };
 static const char *termcmd[]  = { "lxterminal", "-e", "fish", NULL };
 static const char *filemancmd[]  = { "thunar", NULL };
 static const char *simpleprintcmd[]  = { "scrot", "/home/paullik/Pictures/%d-%m-%Y-%T-screenshot.png", NULL };
@@ -124,6 +125,7 @@ static const char *voltogglecmd[]  = { "amixer", "sset", "Master", "toggle", NUL
 static const char *mpcprev[]  = { "mpc", "prev", NULL };
 static const char *mpcnext[]  = { "mpc", "next", NULL };
 static const char *musiccontrol[]  = { "/home/paullik/localhost/ppyt/ppyt.sh", NULL };
+static const char *mpdonly[]  = { "/home/paullik/localhost/ppyt/ppyt.sh", "mpdonly", NULL };
 // static const char *mpdcontrol[]  = { "/home/paullik/localhost/mpdcontrol/mpdcontrol", NULL };
 static const char *screenswitch[]  = { "/home/paullik/.screenlayout/switch.sh", NULL };
 
@@ -180,6 +182,7 @@ static Key keys[] = {
     { MODKEY,                       XK_F1,     spawn,          {.v = mpcprev} },
     { MODKEY,                       XK_F2,     spawn,          {.v = mpcnext} },
     { MODKEY,                       XK_Escape, spawn,          {.v = musiccontrol} },
+    { MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = mpdonly} },
     { MODKEY,                       XK_KP_Enter, spawn,        {.v = voltogglecmd} },
     { MODKEY,                       XK_KP_Add,   spawn,        {.v = volupcmd} },
     { MODKEY,                       XK_KP_Subtract, spawn,     {.v = voldncmd} },

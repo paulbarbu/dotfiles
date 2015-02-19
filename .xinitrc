@@ -41,6 +41,8 @@ unclutter -jitter 5 -idle 2 &
 #workrave &
 wmname LG3D &
 
+node ${HOME}/localhost/ppyt/ppytd.js &>> ~/.ppytd.log &
+
 exec ${HOME}/localhost/dwm/dwm
 #exec startlxde
 #exec i3

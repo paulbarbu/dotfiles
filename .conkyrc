@@ -8,4 +8,4 @@ format_human_readable yes
 short_units yes
 
 TEXT
-$mpd_smart • r $memperc% s $swapperc% • c ${cpu cpu0}% • d ${downspeed eth0} u ${upspeed eth0} • ${time %d-%m-%Y %H:%M}
+${exec nc 127.0.0.1 1338} • r $memperc% s $swapperc% • c ${cpu cpu0}% • d ${downspeed eth0} u ${upspeed eth0} • ${time %d-%m-%Y %H:%M}
