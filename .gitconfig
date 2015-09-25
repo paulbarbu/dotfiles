@@ -38,3 +38,6 @@
     path = .gitconfig.private
 [push]
 	default = simple
+[user]
+	name = Barbu Paul - Gheorghe
+	email = barbu.paul.gheorghe@gmail.com
