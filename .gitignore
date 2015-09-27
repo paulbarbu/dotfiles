@@ -11,6 +11,12 @@ localhost/
 !localhost/dwm/
 !localhost/dwmstatus/
 !localhost/mpdcontrol/
+!localhost/bin/
+!localhost/linux/
+!localhost/buper.sh
+!localhost/rpi_buper.sh
+!localhost/rpi_buper_excludes.txt
+!localhost/rpi_buper_files.txt
 .ICEauthority
 .VirtualBox/
 .Xauthority
@@ -20,7 +26,6 @@ localhost/
 .cache/
 .cgdb/
 .codeblocks/
-.config/
 .dbus/
 .dia/
 .dmrc
@@ -167,8 +172,10 @@ octave-workspace
 .password-store/
 .tmux/
 .gmvault/
+.config/
 !.config/fish/functions/
 !.config/awesome/
+!.config/pcmanfm/
 Android/
 Dropbox/
 HDD-VM/
@@ -195,4 +202,3 @@ Videos/
 .AndroidStudio1.2
 *.swp
 .passpie/
-

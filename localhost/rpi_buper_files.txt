@@ -1,0 +1,7 @@
+home/pi
+etc
+var
+opt
+srv
+root
+boot
