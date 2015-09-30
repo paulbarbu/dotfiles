@@ -375,11 +375,11 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey }, "F2", function () awful.util.spawn("cmus-remote -n", false) end),
     awful.key({ modkey }, "F1", function () awful.util.spawn("cmus-remote -r", false) end),
-    awful.key({ modkey }, "Escape", function () awful.util.spawn("cmus-remote -u", false) end),
+    awful.key({ modkey }, "Escape", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
 
     awful.key({ }, "XF86AudioNext", function () awful.util.spawn("cmus-remote -n", false) end),
     awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("cmus-remote -r", false) end),
-    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("cmus-remote -u", false) end),
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+", false) end),
     awful.key({ modkey }, "KP_Add", function () awful.util.spawn("amixer set Master 5%+", false) end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-", false) end),
