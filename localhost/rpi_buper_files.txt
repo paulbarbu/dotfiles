@@ -4,4 +4,3 @@ var
 opt
 srv
 root
-boot
