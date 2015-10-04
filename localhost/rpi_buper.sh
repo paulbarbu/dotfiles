@@ -24,4 +24,8 @@ opts="-aAXvPR --numeric-ids --delete-excluded --delete"
 rsync $opts -e "$sshOpts" --exclude-from=rpi_buper_excludes.txt -r --files-from=rpi_buper_files.txt root@192.168.0.202:/ "$1"
 
 FINISH=$(date +%s)
-echo "total time: $(( ($FINISH-$START) / 60 )) minutes, $(( ($FINISH-$START) % 60 )) seconds" 
+result="total time: $(( ($FINISH-$START) / 60 )) minutes, $(( ($FINISH-$START) % 60 )) seconds" 
+
+./bin/sendmail.sh "[rpi-backup] done!" "The rpi-backup has ended!\n\n$result"
+
+echo $result
