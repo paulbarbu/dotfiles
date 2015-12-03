@@ -1,10 +1,12 @@
 #!/bin/sh
 
+today=`date +%Y-%m-%d`
+
+mysqldump -u root -p --all-databases > dump-${today}.sql
+
 ./rpi_buper.sh rpi/
 
 REPOSITORY=/media/paul/backup/backup.attic
-
-today=`date +%Y-%m-%d`
 
 attic create --stats                            \
     $REPOSITORY::hostname-$today                \

@@ -373,13 +373,20 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "F5", function () awful.util.spawn(".screenlayout/hdmi-desktop.sh") end),
     awful.key({ modkey }, "F7", function () awful.util.spawn(".screenlayout/hdmi.sh") end),
 
-    awful.key({ modkey }, "F2", function () awful.util.spawn("cmus-remote -n", false) end),
-    awful.key({ modkey }, "F1", function () awful.util.spawn("cmus-remote -r", false) end),
-    awful.key({ modkey }, "Escape", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
+    -- awful.key({ modkey }, "F2", function () awful.util.spawn("cmus-remote -n", false) end),
+    -- awful.key({ modkey }, "F1", function () awful.util.spawn("cmus-remote -r", false) end),
+    -- awful.key({ modkey }, "Escape", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
 
-    awful.key({ }, "XF86AudioNext", function () awful.util.spawn("cmus-remote -n", false) end),
-    awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("cmus-remote -r", false) end),
-    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
+    -- awful.key({ }, "XF86AudioNext", function () awful.util.spawn("cmus-remote -n", false) end),
+    -- awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("cmus-remote -r", false) end),
+    -- awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("localhost/bin/cmus-toggle.sh", false) end),
+    awful.key({ modkey }, "F2", function () awful.util.spawn("mpc next", false) end),
+    awful.key({ modkey }, "F1", function () awful.util.spawn("mpc prev", false) end),
+    awful.key({ modkey }, "Escape", function () awful.util.spawn("localhost/bin/mpc-toggle.sh", false) end),
+
+    awful.key({ }, "XF86AudioNext", function () awful.util.spawn("mpc next", false) end),
+    awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("mpc prev", false) end),
+    awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("localhost/bin/mpc-toggle.sh", false) end),
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+", false) end),
     awful.key({ modkey }, "KP_Add", function () awful.util.spawn("amixer set Master 5%+", false) end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-", false) end),
@@ -394,8 +401,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Shift", "Control"}, "F11", function () awful.util.spawn("systemctl reboot", false) end),
     awful.key({ modkey, "Shift", "Control"}, "F12", function () awful.util.spawn("systemctl poweroff", false) end),
 
-    awful.key({ modkey }, "Scroll_Lock", function () awful.util.spawn("i3lock -d -I 15", false) end)
+    awful.key({ modkey }, "Scroll_Lock", function () awful.util.spawn("i3lock -d -I 15", false) end),
 
+    awful.key({ modkey }, "b", function () mywibox[mouse.screen].visible = not mywibox[mouse.screen].visible end)
 )
 
 clientkeys = awful.util.table.join(
@@ -492,8 +500,6 @@ awful.rules.rules = {
 
     -- User defined
 
-    -- Set Firefox to always map on tags number 2 of screen 1.
-
     { rule = { class = "Iceweasel" },
       properties = { tag = tags[1][1] } },
     { rule = { class = "Icedove" },
@@ -501,8 +507,6 @@ awful.rules.rules = {
     { rule = { class = "Clementine" },
       properties = { tag = tags[1][4] } },
     { rule = { class = "Transmission-gtk" },
-      properties = { tag = tags[1][4] } },
-    { rule = { class = "Gnome-terminal", name = "cmus v2.5.0" },
       properties = { tag = tags[1][4] } },
     { rule = { class = "VirtualBox" },
       properties = { tag = tags[1][5] } },
@@ -597,11 +601,16 @@ function run_once(cmd)
 end
 
 
-
+run_once('wmname Sawfish')
+run_once('setxkbmap ro')
 run_once('nm-applet')
 run_once('iceweasel')
 run_once('icedove')
 run_once('parcellite')
-run_once('gnome-terminal -x bash -c "tmux new -d -n music -s music cmus && tmux send-keys -t music 2 C-m"')
+-- run_once('gnome-terminal -x bash -c "tmux new -d -n music -s music cmus && tmux send-keys -t music 2 C-m"')
+run_once('dropbox start')
+run_once('amixer set Master 20%')
+run_once('[ ! -s ~/.config/mpd/pid ] && mpd /home/paul/.config/mpd/mpd.conf')
 bat_check()
 cputemp_check()
+bat_check()
