@@ -3,6 +3,7 @@
 today=`date +%Y-%m-%d`
 
 mysqldump -u root -p --all-databases > dump-${today}.sql
+crontab -l > crontab-${today}
 
 ./rpi_buper.sh rpi/
 
