@@ -25,9 +25,9 @@ max_dt=${max_dt%_*}
 # rename the files to something that avconv can understand
 ls $M/*.jpg | sort | awk -v dir=$M 'BEGIN{ a=0 }{ printf "mv %s " dir "/cam%09d.jpg\n", $0, a++ }' | bash
 
-avi="${min_dt}__${max_dt}.avi"
+avi="${min_dt}__${max_dt}.mpg"
 echo "Encoding to: $avi"
-avconv -r 15 -f image2 -i $M/cam%9d.jpg "$V/$avi" &> /dev/null
+avconv -f image2 -i $M/cam%9d.jpg -c:v mpeg1video -q:v 4 "$V/$avi"
 
 echo "Cleaning up ..."
 
