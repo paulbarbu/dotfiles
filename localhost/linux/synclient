@@ -40,7 +40,7 @@ Parameter settings:
     CircScrollDelta         = 0.1
     CircScrollTrigger       = 0
     CircularPad             = 0
-    PalmDetect              = 0
+    PalmDetect              = 1
     PalmMinWidth            = 10
     PalmMinZ                = 200
     CoastingSpeed           = 20

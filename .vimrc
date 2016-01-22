@@ -8,7 +8,6 @@ execute pathogen#infect()
 " 'expandtab'.  This way you will always insert spaces.  The
 " formatting will never be messed up when 'tabstop' is changed.
 
-
 " Act like a tab character has 4 spaces
 set tabstop=4
 
@@ -19,6 +18,12 @@ set shiftwidth=4
 set expandtab
 
 """"""" Others
+" Highlight all search matches
+set hlsearch
+
+" Change the current directory to the one the current file is in
+set autochdir
+
 " Highlight the 120th colum 
 set colorcolumn=120
 " Highlight the column with dark gray
