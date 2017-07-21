@@ -21,6 +21,11 @@ set expandtab
 " Highlight all search matches
 set hlsearch
 
+" Use smartcase for searching if the searched string contains uppercase chars the search will be
+" case-sensitive, otherwise will be case-insensitive
+set ignorecase
+set smartcase
+
 " Change the current directory to the one the current file is in
 set autochdir
 
