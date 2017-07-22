@@ -1,5 +1,6 @@
 /home/*/.gvfs
 /home/pi/watermarked
+/home/pi/backup
 /srv/ftp/*
 /home/*/.thumbnails/*
 /home/*/.cache/mozilla/*
