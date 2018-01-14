@@ -1,6 +1,7 @@
 /home/*/.gvfs
 /home/pi/watermarked
 /home/pi/backup
+/home/pi/today
 /srv/ftp/*
 /home/*/.thumbnails/*
 /home/*/.cache/mozilla/*
@@ -19,3 +20,8 @@
 /lib/modules/*/volatile/.mounted
 /var/cache/apt/archives/*
 /var/log/*
+/var/cache
+/var/backups
+/var/lib
+/var/tmp
+/var/spool
