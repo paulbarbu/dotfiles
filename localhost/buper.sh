@@ -6,6 +6,7 @@
 ##
 
 today=`date +%Y-%m-%d`
+repodate=`date +%Y-%m-%d`
 
 echo 'Backing up MySQL'
 mysqldump -u root -p --all-databases > dump-${today}.sql
@@ -17,16 +18,22 @@ crontab -l -u paul > crontab-${today}
 
 REPOSITORY=/media/paul/backup/backup.borg
 
-if [ "$#" -eq 1 ]
+if [ "$1" = "remote" ]
 then
     REPOSITORY=backup:/home/pi/backup/backup.borg
     echo 'Using remote repository.'
+
+    if [ "$2" = "weekly" ]
+    then
+        repodate=`date +%W`
+        echo 'Automated weekly backup.'
+    fi
 fi
 
 echo 'Starting borg...'
 
-borg create --stats                            \
-    $REPOSITORY::hostname-$today                \
+borg create --stats                             \
+    $REPOSITORY::hostname-$repodate             \
     /home/paul                                  \
     --exclude /home/paul/.gvfs                  \
     --exclude /home/paul/.thumbnails            \
