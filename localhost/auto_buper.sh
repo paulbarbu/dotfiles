@@ -31,3 +31,5 @@ fi
 
 unset BORG_PASSPHRASE
 unset DISPLAY
+
+zenity --info --text "Weekly backup started on $today done"

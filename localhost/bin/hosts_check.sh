@@ -16,7 +16,7 @@ function check_host
 
 home_network=192.168.0
 home_addrs=(192.168.0.202 192.168.0.251)
-public_addrs=(paulhost.dlinkddns.com)
+public_addrs=(paullik.ddns.net)
 
 eth0=$(ip -f inet address show eth0 | grep inet | cut -d ' ' -f 6 | cut -d '.' -f 1,2,3)
 wlan0=$(ip -f inet address show wlan0 | grep inet | cut -d ' ' -f 6 | cut -d '.' -f 1,2,3)
