@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # In order to backup from the RPi to the local PC use:
-# rsync -aAXv / --exclude={"/var/local","/var/mail","/var/lost+found","/var/lock","/var/run","/usr/games","/usr/sbin","/var/tmp","/var/lib/initramfs-tools/","/var/lib/dpkg","/var/lib/apt","/var/libs","/var/backups","/var/cache","/usr/src","/usr/local","/usr/share","/sbin","/usr/lib","/usr/include","/usr/bin","/var/log","/var.old","/lib","/home/pi/.local","/home/pi/.cache","/boot","/bin","/dev","/proc","/sys","/tmp","/run","/mnt","/media","/lost+found"}
 # rsync --rsync-path 'sudo rsync' -aAXv rpi:/home --exclude={"/var/local","/var/mail","/var/lost+found","/var/lock","/var/run","/usr/games","/usr/sbin","/var/tmp","/var/lib/initramfs-tools/","/var/lib/dpkg","/var/lib/apt","/var/libs","/var/backups","/var/cache","/usr/src","/usr/local","/usr/share","/sbin","/usr/lib","/usr/include","/usr/bin","/var/log","/var.old","/lib","/home/pi/.local","/home/pi/.cache","/boot","/bin","/dev","/proc","/sys","/tmp","/run","/mnt","/media","/lost+found"} rpi4/
 # rsync --rsync-path 'sudo rsync' -aAXv rpi:/etc --exclude={"/var/local","/var/mail","/var/lost+found","/var/lock","/var/run","/usr/games","/usr/sbin","/var/tmp","/var/lib/initramfs-tools/","/var/lib/dpkg","/var/lib/apt","/var/libs","/var/backups","/var/cache","/usr/src","/usr/local","/usr/share","/sbin","/usr/lib","/usr/include","/usr/bin","/var/log","/var.old","/lib","/home/pi/.local","/home/pi/.cache","/boot","/bin","/dev","/proc","/sys","/tmp","/run","/mnt","/media","/lost+found"} rpi4/
 
