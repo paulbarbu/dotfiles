@@ -17,3 +17,5 @@ UUID=611fbe01-eacc-42cc-b9d9-e081ced9857f /home           ext4    defaults      
 
 ##SSD performance
 tmpfs /tmp tmpfs noatime,nosuid 0 0
+
+192.168.0.202:/   /mnt/rpi-nfs   nfs   defaults,bg,soft,timeo=50,retrans=5,_netdev	0 0
